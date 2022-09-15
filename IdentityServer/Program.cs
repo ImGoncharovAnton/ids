@@ -87,8 +87,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapRazorPages();
 
-if (app.Environment.IsDevelopment())
-{
+
     using var scope = app.Services.CreateScope();
 
     await scope.ServiceProvider.GetRequiredService<ApplicationDbContext>().Database.MigrateAsync();
@@ -204,7 +203,7 @@ if (app.Environment.IsDevelopment())
         
         await configurationDbContext.SaveChangesAsync();
     }
-}
+
 
 app.Run();
 
