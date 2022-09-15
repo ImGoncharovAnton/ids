@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace IdentityServer.Data.Migrations.Identity.ConfigurationDb
 {
     [DbContext(typeof(ConfigurationDbContext))]
-    [Migration("20220914144217_InitialIdentityServerConfigurationDbMigration")]
-    partial class InitialIdentityServerConfigurationDbMigration
+    [Migration("20220915081338_InitialIdentityServerConfiguratinDbMigration")]
+    partial class InitialIdentityServerConfiguratinDbMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

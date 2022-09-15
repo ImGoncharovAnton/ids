@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace IdentityServer.Data.Migrations.Identity.ApplicationDb
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220914142019_InitialIdentityApplicationDbMigration")]
+    [Migration("20220915081152_InitialIdentityApplicationDbMigration")]
     partial class InitialIdentityApplicationDbMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

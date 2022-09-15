@@ -29,6 +29,15 @@ public class ApplicationUserClaimsPrincipalFactory: UserClaimsPrincipalFactory<A
             claimsIdentity.AddClaim(new Claim(JwtClaimTypes.FamilyName, user.FamilyName));
         }
 
+        if (UserManager.SupportsUserRole)
+        {
+            IList<string> roles = await UserManager.GetRolesAsync(user);
+            foreach (var rolename in roles)
+            {
+                claimsIdentity.AddClaim(new Claim(JwtClaimTypes.Role, rolename));
+            }
+        }
+
         return claimsIdentity;
     }
 }
